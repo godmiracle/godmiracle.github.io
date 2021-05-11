@@ -7,6 +7,7 @@
 
 2. HTML 起手应该写什么
 
+   ```
    <!DOCTYPE html>
    <html lang="en">
    <head>
@@ -16,11 +17,11 @@
      </style>
    </head>
    <body>
-
    <div></div>
    <div></div>
    </body>
    </html>
+   ```
 
 3. 常用的表章节的标签有哪些，分别是什么意思（h1~h6、section、article、main、aside 等等）
 
@@ -50,7 +51,7 @@
 
    ol li(ordered list+list item)
 
-​	   ul li(unordered list + list item)
+​	    ul li(unordered list + list item)
 
 ​		dl dt dd(description list + term +data)
 
@@ -68,8 +69,10 @@
 
 ​		code
 
+​        blockquote
+
 ​		q(quoto)
 
- 		blockquote		
+ 	   		
 
 
