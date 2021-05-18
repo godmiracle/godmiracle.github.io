@@ -11,7 +11,8 @@
    * layout布局（文档流、盒模型、计算大小和位置）
    * Paint绘制（把边框颜色、文字颜色、阴影等画出来）
    * Compose合成（根据层叠关系展示画面）
-   * ![image-20210518134009118](/Users/vb/Library/Application Support/typora-user-images/image-20210518134009118.png)
+
+     
 
 2. CSS 动画的两种做法（transition 和 animation）
 
