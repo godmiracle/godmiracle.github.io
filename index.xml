@@ -7,10 +7,10 @@
             <atom:link href="https://godmiracle.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>JavaScript</title>
-    <link>https://godmiracle.github.io/javascript-%E7%9A%84%E8%AF%9E%E7%94%9F/</link>
+    <link>https://godmiracle.github.io/javascript/</link>
     <pubDate>Tue, 18 May 2021 17:51:59 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://godmiracle.github.io/javascript-%E7%9A%84%E8%AF%9E%E7%94%9F/</guid>
+    <guid>https://godmiracle.github.io/javascript/</guid>
     <description><![CDATA[JavaScript 的诞生 1994年，网景发布了浏览器，在当时轰动一时。但是，此时它还不具备与访问者交互的能力。网景公司急需一门网页脚本语言，使得浏览器可以与]]></description>
 </item><item>
     <title>浅析url</title>
