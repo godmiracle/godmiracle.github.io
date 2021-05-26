@@ -11,7 +11,7 @@
     <pubDate>Sun, 23 May 2021 03:25:19 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://godmiracle.github.io/js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</guid>
-    <description><![CDATA[JS对象基本用法]]></description>
+    <description><![CDATA[JS对象基本用法 声明对象的两种语法 let obj ={} let obj = new Object({}) 如何删除对象的属性 delete obj.xxx或delete obj['xxx'] 如何查看对象的属性 查看自身所有属性 Object.keys(obj) 查看]]></description>
 </item><item>
     <title>JS基本语法</title>
     <link>https://godmiracle.github.io/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
