@@ -3,9 +3,16 @@
         <title>我爱喝橙汁的博客</title>
         <link>https://godmiracle.github.io/</link>
         <description>这是我的我爱喝橙汁的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 07 Jun 2021 17:50:44 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 07 Jun 2021 17:51:39 &#43;0800</lastBuildDate>
             <atom:link href="https://godmiracle.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>DOM事件和事件委托</title>
+    <link>https://godmiracle.github.io/dom%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/</link>
+    <pubDate>Mon, 07 Jun 2021 17:51:39 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://godmiracle.github.io/dom%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/</guid>
+    <description><![CDATA[简述 DOM 事件模型 事件流 事件冒泡 事件冒泡是IE 的事件流，事件是由最具体的元素接收，然后逐级向上传播，在每一级的节点上都会发生，直到传播到docu]]></description>
+</item><item>
     <title>JQuery小结</title>
     <link>https://godmiracle.github.io/jquery%E5%B0%8F%E7%BB%93/</link>
     <pubDate>Mon, 07 Jun 2021 17:50:44 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://godmiracle.github.io/css%E7%9B%92%E6%A8%A1%E5%9E%8B/</guid>
     <description><![CDATA[css盒模型 完整的 CSS 盒模型应用于块级盒子，内联盒子只使用盒模型中定义的部分内容。模型定义了盒的每个部分 —— margin, border, padding, and content —— 合在一起就可以创建我]]></description>
-</item><item>
-    <title>Html入门笔记3</title>
-    <link>https://godmiracle.github.io/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B03/</link>
-    <pubDate>Thu, 13 May 2021 01:56:43 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://godmiracle.github.io/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B03/</guid>
-    <description><![CDATA[Html入门笔记3]]></description>
 </item></channel>
 </rss>
