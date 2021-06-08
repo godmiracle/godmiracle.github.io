@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>DOM - 我爱喝橙汁的博客</title><meta name="Description" content="这是我的我爱喝橙汁的博客"><meta property="og:title" content="DOM" />
+<meta property="og:description" content="DOM编程 JS七种数据类型 number,string,bool,symbol,null,undefined,object JS五个falsy值 0,NaN,&#39;&#39;,null,undefined DOM定义 含义：Document Object Model 文档对象模型；浏览器往window上加一个docume" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://godmiracle.github.io/dom/" /><meta property="og:image" content="https://godmiracle.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-04T05:41:12&#43;08:00" />
+<meta property="article:modified_time" content="2021-06-04T05:41:12&#43;08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://godmiracle.github.io/logo.png"/>
+
+<meta name="twitter:title" content="DOM"/>
+<meta name="twitter:description" content="DOM编程 JS七种数据类型 number,string,bool,symbol,null,undefined,object JS五个falsy值 0,NaN,&#39;&#39;,null,undefined DOM定义 含义：Document Object Model 文档对象模型；浏览器往window上加一个docume"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://godmiracle.github.io/dom/" /><link rel="prev" href="https://godmiracle.github.io/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" /><link rel="next" href="https://godmiracle.github.io/jquery%E5%B0%8F%E7%BB%93/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "DOM",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/godmiracle.github.io\/dom\/"
+        },"genre": "posts","wordcount":  1972 ,
+        "url": "https:\/\/godmiracle.github.io\/dom\/","datePublished": "2021-06-04T05:41:12+08:00","dateModified": "2021-06-04T05:41:12+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "我爱喝橙汁"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="我爱喝橙汁的博客"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/logo.png"
+        data-srcset="/logo.png, /logo.png 1.5x, /logo.png 2x"
+        data-sizes="auto"
+        alt="/logo.png"
+        title="/logo.png" /><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="我爱喝橙汁的博客"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/logo.png"
+        data-srcset="/logo.png, /logo.png 1.5x, /logo.png 2x"
+        data-sizes="auto"
+        alt="/logo.png"
+        title="/logo.png" /><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">DOM</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>我爱喝橙汁</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-04">2021-06-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1972 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="dom编程">DOM编程</h1>
+<h4 id="js七种数据类型">JS七种数据类型</h4>
+<p>number,string,bool,symbol,null,undefined,object</p>
+<h4 id="js五个falsy值">JS五个falsy值</h4>
+<p>0,NaN,'',null,undefined</p>
+<h4 id="dom定义">DOM定义</h4>
+<ul>
+<li>含义：Document Object Model 文档对象模型；浏览器往window上加一个document，JS就可以操作网页</li>
+</ul>
+<h4 id="获取元素element也叫标签tag">获取元素（element），也叫标签(tag)</h4>
+<ul>
+<li>window.idXXX 或者 idXXX</li>
+<li>document.getElementById(&lsquo;idXXX&rsquo;)</li>
+<li>document.getElementsByTagName(&lsquo;div&rsquo;)[0]</li>
+<li>document.getElementsByClassName(&lsquo;red&rsquo;)[0]</li>
+<li>document.querySelector('#idXXX')</li>
+<li>document.querySelectorAll('.red')[0]</li>
+</ul>
+<h4 id="获取待定元素">获取待定元素</h4>
+<ul>
+<li>获取html元素：document.documentElement</li>
+<li>获取head元素：document.head</li>
+<li>获取body元素：document.body</li>
+<li>获取窗口(窗口不是元素)：window</li>
+<li>获取所有元素：document.all</li>
+</ul>
+<h4 id="节点node">节点Node</h4>
+<p>包括(常用):</p>
+<ul>
+<li>1表示元素Element，也叫标签Tag</li>
+<li>3表示文本</li>
+<li>8表示注释Coment</li>
+<li>9表示文档Dcument</li>
+<li>11表示文档片段DocumentFragment</li>
+</ul>
+<h4 id="cosoledirdiv看原型链">cosole.dir(div)看原型链</h4>
+<ul>
+<li>第一层原型：HTMLDIVElement.prototype（这里包含div所有共有属性）</li>
+<li>第二层原型：HTMLElement.prototype(这里面所有HTML标签共有属性)</li>
+<li>第三层原型：Element.prototype(这里所有XML,HTML标签共有属性，不会以浏览器只能展示HTML)</li>
+<li>第四场原型：Node.prototype(这里面所有节点共有属性，节点包括XML标签文本注释，HTML标签文本注释等)</li>
+<li>第五层原型：EventTarget.prototype(里面最重要函数是addEventListener)</li>
+<li>第六层原型：Object.prototype</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://segmentfault.com/img/bVcO4LK"
+        data-srcset="https://segmentfault.com/img/bVcO4LK, https://segmentfault.com/img/bVcO4LK 1.5x, https://segmentfault.com/img/bVcO4LK 2x"
+        data-sizes="auto"
+        alt="https://segmentfault.com/img/bVcO4LK"
+        title="image" /></p>
+<h4 id="节点增加">节点增加</h4>
+<ul>
+<li>创建一个标签节点</li>
+</ul>
+<pre><code>1. let div1=document.createElement('div')
+2. document.createElement('style')
+3. document.creatElement('script')
+4. document.createElement('li')
+</code></pre><ul>
+<li>创建一个文本节点</li>
+</ul>
+<pre><code>text1=document.createTextNode('你好')
+</code></pre><ul>
+<li>标签里面插入文本</li>
+</ul>
+<pre><code> div1.appendChild(text1)
+ div1.innerText='你好' 或 div1.textContent='你好'
+</code></pre><p>*插入页面</p>
+<ol>
+<li>创建标签默认处于JS线程中</li>
+<li>必须把它插到head或者body立，才会生效</li>
+<li></li>
+</ol>
+<pre><code>document.body.appendChild(div)
+</code></pre><p>4.在已有页面中元素.appendChild(div)</p>
+<h4 id="节点的删除">节点的删除</h4>
+<ul>
+<li>两种方法：</li>
+</ul>
+<ol>
+<li>旧方法：parentNode.childChild(childNode)</li>
+<li>新方法：childNode.remove() //IE不支持</li>
+</ol>
+<h4 id="节点的改属性">节点的改属性</h4>
+<ul>
+<li>写标准属性</li>
+</ul>
+<pre><code>1. 改class:div.className='red blue'
+2. 改class:div.classList.add('red')
+3. 改style:div.style='width:100px;color:blue'
+4. 改style的一部分:div.style.width='200px'
+5. 大小写：div.style.backgroundColor='white'
+6. 改data-*属性：div.dataset.x='frank'
+</code></pre><ul>
+<li>读标准属性</li>
+</ul>
+<pre><code> div.classList/a.href
+ div.getAttribut('class')/a.getAttribut('href')
+</code></pre><p>两种都可以用，但是值可能会稍微有点不同</p>
+<ul>
+<li>改事件处理函数</li>
+</ul>
+<ol>
+<li>div.onclick默认null</li>
+<li>默认点击，div不会有任何事情发生</li>
+<li>但如果把div.onclick改成一个函数fn</li>
+<li>那么点击div的时候，浏览器就会调用这个函数</li>
+<li>并且是这样被调用fn.call(div.event)</li>
+<li>div会被当成this</li>
+<li>event则包含了点击事件的所有信息，如坐标</li>
+<li>div.addEventListener是div.onclick的升级</li>
+</ol>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://segmentfault.com/img/bVcO4LJ"
+        data-srcset="https://segmentfault.com/img/bVcO4LJ, https://segmentfault.com/img/bVcO4LJ 1.5x, https://segmentfault.com/img/bVcO4LJ 2x"
+        data-sizes="auto"
+        alt="https://segmentfault.com/img/bVcO4LJ"
+        title="image" /></p>
+<ul>
+<li>节点改内容</li>
+</ul>
+<p>1.改文本内容</p>
+<pre><code>div.innerText='xxx'
+div.textContent='xxx'
+</code></pre><p>2.改HTML内容</p>
+<pre><code>div.innerHTML='&lt;strong&gt;重要内容&lt;/strong&gt;'
+</code></pre><p>3.改标签</p>
+<pre><code>div.innerHTML=''    //先清空
+div.appendChild(div2)  //再加内容
+</code></pre><p>4.改爸爸</p>
+<pre><code>newParent.appendChild(div)
+</code></pre><h4 id="节点的查询">节点的查询</h4>
+<ul>
+<li>查爸爸</li>
+</ul>
+<pre><code>node.parentNode 或 node.parentElement
+</code></pre><ul>
+<li>查爷爷</li>
+</ul>
+<pre><code>node.parentNode.parentNode
+</code></pre><ul>
+<li>查子代</li>
+</ul>
+<pre><code>node.childNodes 或 node.children
+</code></pre><ul>
+<li>查兄弟姐妹</li>
+</ul>
+<pre><code>node.parentNode.childNodes  //排除自己
+node.parentNode.children   //排除自己
+</code></pre><ul>
+<li>查老大</li>
+</ul>
+<pre><code>node.firstChild 或 node.children[0]
+</code></pre><ul>
+<li>查老幺</li>
+</ul>
+<pre><code>node.lastChild
+</code></pre><ul>
+<li>查看上一个哥哥/姐姐</li>
+</ul>
+<pre><code>node.previousSibling
+</code></pre><ul>
+<li>查看下一个弟弟/妹妹(注意这里可能查到文本节点)</li>
+</ul>
+<pre><code>node.nextSibling
+</code></pre><ul>
+<li>遍历一个div里面所有的元素</li>
+</ul>
+<pre><code>travel = (node.fn)=&gt;{
+   fn(node)
+    if(node.children){
+      for(let i=0;i&lt;node.children.length;i++){
+        travel(node.children[1],fn)
+      }
+    }
+}
+travel(div1,(node)=&gt;console.log(node))
+</code></pre><h4 id="跨线程操作">跨线程操作</h4>
+<h5 id="属性同步">属性同步</h5>
+<ul>
+<li>标准属性</li>
+</ul>
+<ol>
+<li>对div1的标准属性修改，会被浏览器同步到页面中</li>
+<li>比如id,className,title等</li>
+<li>data-*属性</li>
+</ol>
+<ul>
+<li>启示：如果有自定义属性，想被同步到页面中，请使用data-作为前缀</li>
+</ul>
+<h4 id="property-与-attribute">Property 与 Attribute</h4>
+<ul>
+<li>property属性：JS线程中div1的所有属性，叫做div1的property</li>
+<li>Attribut属性：渲染引擎中div1对应标签的属性，叫做attribute</li>
+<li>区别：大部分时候，两者的值是相等的；但如果不是标准属性，那么它们一开始时相等，但attribute只支持字符串，而property支持字符串，布尔等类型</li>
+</ul>
+<h4 id="注意">注意</h4>
+<p>1.假设页面中有如下元素</p>
+<pre><code>&lt;div id=&quot;test&quot; class=&quot;red&quot;&gt;demo&lt;/div&gt;
+</code></pre><p>获取该 div 元素的代码:</p>
+<ol>
+<li>document.getElementById(&lsquo;test&rsquo;)</li>
+<li>document.getElementsByClassName(&lsquo;red&rsquo;)[0]</li>
+<li>window.test</li>
+<li>document.querySelector('#test')</li>
+<li>document.querySelectorAll('#test')[0]</li>
+</ol>
+<p>2.关于节点(Node) 、元素(Element)、标签(Tag) 的关系描述:</p>
+<ol>
+<li>节点包括元素和文本等</li>
+<li>元素就是标签，叫法不同而已</li>
+</ol>
+<p>3.要删除一个节点 x</p>
+<ol>
+<li>x.parentNode.removeChild(x)</li>
+<li>x.remove()</li>
+</ol>
+<p>4.获取 x 元素的 class 属性</p>
+<ol>
+<li>x.className</li>
+<li>x.getAttribute(&lsquo;class&rsquo;)</li>
+</ol>
+<p>5.将 div 的宽度设置为 100 像素
+div.style.width = &lsquo;100px&rsquo;</p>
+<p>6.关于以下代码，下列说法正确</p>
+<pre><code>div.onclick = function(){
+    console.log(this)
+    console.log(arguments[0])
+}
+</code></pre><ol>
+<li>当用户点击该 div 时，该代码中的 this 是 div</li>
+<li>当用户点击该 div 时，arguments[0] 是事件相关的信息组成的对象</li>
+</ol>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-06-04</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/dom/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://godmiracle.github.io/dom/" data-title="DOM" data-via="xxxx"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://godmiracle.github.io/dom/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://godmiracle.github.io/dom/" data-title="DOM" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://godmiracle.github.io/dom/" data-title="DOM"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://godmiracle.github.io/dom/" data-title="DOM"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://godmiracle.github.io/dom/" data-title="DOM" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://godmiracle.github.io/dom/" data-title="DOM" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://godmiracle.github.io/dom/" data-title="DOM"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" class="prev" rel="prev" title="JS函数的执行时机"><i class="fas fa-angle-left fa-fw"></i>JS函数的执行时机</a>
+            <a href="/jquery%E5%B0%8F%E7%BB%93/" class="next" rel="next" title="JQuery小结">JQuery小结<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">我爱喝橙汁</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"我爱喝橙汁的博客","id-2":"我爱喝橙汁的博客"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

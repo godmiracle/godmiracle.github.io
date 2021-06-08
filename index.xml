@@ -3,9 +3,23 @@
         <title>我爱喝橙汁的博客</title>
         <link>https://godmiracle.github.io/</link>
         <description>这是我的我爱喝橙汁的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 28 May 2021 18:59:16 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 07 Jun 2021 17:50:44 &#43;0800</lastBuildDate>
             <atom:link href="https://godmiracle.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>JQuery小结</title>
+    <link>https://godmiracle.github.io/jquery%E5%B0%8F%E7%BB%93/</link>
+    <pubDate>Mon, 07 Jun 2021 17:50:44 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://godmiracle.github.io/jquery%E5%B0%8F%E7%BB%93/</guid>
+    <description><![CDATA[JQuery小结 jQuery 如何获取元素 元素选择器 jQuery 使用 CSS 选择器来选取 HTML 元素。 $(&quot;p&quot;) 选取 &lt;p&gt; 元素。 $(&quot;p.intro&quot;) 选取所有 class=&ldquo;intro&rdquo; 的 &lt;p&gt; 元素。 $(&quot;p#demo&quot;) 选取所有 id=&ldquo;demo&rdquo; 的 &lt;p&gt; 元素。 属性选择器 $(&quot;[href]&quot;) 选]]></description>
+</item><item>
+    <title>DOM</title>
+    <link>https://godmiracle.github.io/dom/</link>
+    <pubDate>Fri, 04 Jun 2021 05:41:12 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://godmiracle.github.io/dom/</guid>
+    <description><![CDATA[DOM编程 JS七种数据类型 number,string,bool,symbol,null,undefined,object JS五个falsy值 0,NaN,'',null,undefined DOM定义 含义：Document Object Model 文档对象模型；浏览器往window上加一个docume]]></description>
+</item><item>
     <title>JS函数的执行时机</title>
     <link>https://godmiracle.github.io/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/</link>
     <pubDate>Fri, 28 May 2021 18:59:16 &#43;0800</pubDate>
@@ -61,19 +75,5 @@
     <author>作者</author>
     <guid>https://godmiracle.github.io/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B03/</guid>
     <description><![CDATA[Html入门笔记3]]></description>
-</item><item>
-    <title>Html入门笔记2</title>
-    <link>https://godmiracle.github.io/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B02/</link>
-    <pubDate>Thu, 13 May 2021 01:47:21 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://godmiracle.github.io/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B02/</guid>
-    <description><![CDATA[#Html入门笔记2]]></description>
-</item><item>
-    <title>Html常用标签</title>
-    <link>https://godmiracle.github.io/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
-    <pubDate>Wed, 12 May 2021 01:31:22 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://godmiracle.github.io/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
-    <description><![CDATA[常用标签 a标签的用法 HTML &lt;a&gt; 元素（或称锚元素）可以通过它的 href 属性创建通向其他网页、文件、同一页面内的位置、电子邮件地址或任何其他 URL 的超链接。&l]]></description>
 </item></channel>
 </rss>
