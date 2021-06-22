@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Js常见面试题 - 我爱喝橙汁的博客</title><meta name="Description" content="这是我的我爱喝橙汁的博客"><meta property="og:title" content="Js常见面试题" />
+<meta property="og:description" content="Js常见面试题 什么是闭包？闭包的用途是什么？闭包的缺点是什么？ 闭包 如果一个函数用到了外部的变量，那么这个函数加这个变量就叫做闭包 function A(){ let a = 1" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://godmiracle.github.io/js%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/" /><meta property="og:image" content="https://godmiracle.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-23T03:23:25&#43;08:00" />
+<meta property="article:modified_time" content="2021-06-23T03:23:25&#43;08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://godmiracle.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Js常见面试题"/>
+<meta name="twitter:description" content="Js常见面试题 什么是闭包？闭包的用途是什么？闭包的缺点是什么？ 闭包 如果一个函数用到了外部的变量，那么这个函数加这个变量就叫做闭包 function A(){ let a = 1"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://godmiracle.github.io/js%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/" /><link rel="prev" href="https://godmiracle.github.io/dom%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Js常见面试题",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/godmiracle.github.io\/js%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98\/"
+        },"genre": "posts","wordcount":  2702 ,
+        "url": "https:\/\/godmiracle.github.io\/js%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98\/","datePublished": "2021-06-23T03:23:25+08:00","dateModified": "2021-06-23T03:23:25+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "我爱喝橙汁"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="我爱喝橙汁的博客"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/logo.png"
+        data-srcset="/logo.png, /logo.png 1.5x, /logo.png 2x"
+        data-sizes="auto"
+        alt="/logo.png"
+        title="/logo.png" /><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="我爱喝橙汁的博客"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/logo.png"
+        data-srcset="/logo.png, /logo.png 1.5x, /logo.png 2x"
+        data-sizes="auto"
+        alt="/logo.png"
+        title="/logo.png" /><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Js常见面试题</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>我爱喝橙汁</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-23">2021-06-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2702 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><h1 id="js常见面试题">Js常见面试题</h1>
+<ol>
+<li>
+<p>什么是闭包？闭包的用途是什么？闭包的缺点是什么？</p>
+<ul>
+<li>
+<p>闭包</p>
+<p>如果一个函数用到了外部的变量，那么这个函数加这个变量就叫做闭包</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">A</span><span class="p">(){</span>
+    <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="kd">function</span> <span class="nx">B</span><span class="p">()</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li>
+<p>用途</p>
+<p>一是常常用来&rsquo;间接访问一个变量'，而是让这个变量的值始终保持在内存中。</p>
+</li>
+<li>
+<p>缺点</p>
+<p>由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。</p>
+<p>闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值</p>
+</li>
+</ul>
+</li>
+<li>
+<p>call、apply、bind 的用法分别是什么？</p>
+<ul>
+<li>
+<p>call() 方法使用一个指定的 this 值和单独给出的一个或多个参数来调用一个函数。</p>
+<p><code>function.call(thisArg, arg1, arg2, ...)</code></p>
+</li>
+<li>
+<p>apply() 方法调用一个具有给定this值的函数，以及以一个数组（或类数组对象）的形式提供的参数。</p>
+<p><code>func.apply(thisArg, [argsArray])</code></p>
+</li>
+<li>
+<p>bind() 方法创建一个新的函数，在 bind() 被调用时，这个新函数的 this 被指定为 bind() 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。</p>
+<p><code>function.bind(thisArg[, arg1[, arg2[, ...]]])</code></p>
+</li>
+<li>
+<p>相同之处</p>
+<p>改变函数体内 this 的指向。</p>
+</li>
+<li>
+<p>不同之处</p>
+<p>call、apply的区别：接受参数的方式不一样。</p>
+<p>bind：不立即执行。而apply、call 立即执行。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>请说出至少 10 个 HTTP 状态码，并描述各状态码的意义。</p>
+<ul>
+<li>
+<p>100 - 继续。客户端应继续其请求</p>
+</li>
+<li>
+<p>200 - 请求成功。一般用于GET与POST请求</p>
+</li>
+<li>
+<p>201 - 已创建。成功请求并创建了新的资源</p>
+</li>
+<li>
+<p>202 - 已接受。已经接受请求，但未处理完成</p>
+</li>
+<li>
+<p>301 - 资源（网页等）被永久转移到其它URL</p>
+</li>
+<li>
+<p>302 -  临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URI</p>
+</li>
+<li>
+<p>404 - 请求的资源（网页等）不存在</p>
+</li>
+<li>
+<p>405 - 客户端请求中的方法被禁止</p>
+</li>
+<li>
+<p>406 - 服务器无法根据客户端请求的内容特性完成请求</p>
+</li>
+<li>
+<p>500 - 内部服务器错误</p>
+</li>
+<li>
+<p>502 - 作为网关或者代理工作的服务器尝试执行请求时，从远程服务器接收到了一个无效的响应</p>
+</li>
+</ul>
+</li>
+<li>
+<p>如何实现数组去重？
+假设有数组 <code>array = [1,5,2,3,4,2,3,1,3,4]</code>,你要写一个函数 unique，使得到的值为 <code>unique(array) = [1,5,2,3,4]</code>，也就是把重复的值都去掉，只保留不重复的值。</p>
+<ul>
+<li>
+<p>使用Set</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">unique</span><span class="p">(</span><span class="nx">array</span><span class="p">){</span>
+  <span class="k">return</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="k">new</span> <span class="nx">Set</span><span class="p">(</span><span class="nx">array</span><span class="p">))</span>
+  <span class="c1">// 可简化return [...new Set(array)]
+</span><span class="c1"></span><span class="p">}</span>
+<span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">unique</span><span class="p">(</span><span class="nx">array</span><span class="p">))</span>
+<span class="c1">// [1,5,2,3,4]
+</span></code></pre></div><p>对象不会去重。</p>
+</li>
+<li>
+<p>不使用Set</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">unique</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">();</span>
+  <span class="kd">let</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[];</span>  <span class="c1">// 数组用于返回结果
+</span><span class="c1"></span>  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span> <span class="p">{</span>  <span class="c1">// 如果有该key值
+</span><span class="c1"></span>      <span class="nx">map</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="kc">true</span><span class="p">);</span> 
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> 
+      <span class="nx">map</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="kc">false</span><span class="p">);</span>   <span class="c1">// 如果没有该key值
+</span><span class="c1"></span>      <span class="nx">array</span> <span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+  <span class="p">}</span> 
+  <span class="k">return</span> <span class="nx">array</span> <span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">unique</span><span class="p">(</span><span class="nx">array</span><span class="p">))</span>
+<span class="c1">// [1,5,2,3,4]
+</span></code></pre></div><p>对象不会去重。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>DOM 事件相关,事件委托是什么，怎么阻止默认动作，怎么阻止事件冒泡？</p>
+<ul>
+<li>
+<p>事件委托</p>
+<p>利用事件冒泡的原理，让自己所触发的事件，让其父元素代替执行。</p>
+</li>
+<li>
+<p>阻止默认动作</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">非IE浏览器</span><span class="err">：</span><span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span>
+<span class="nx">IE浏览器</span><span class="err">：</span><span class="nb">window</span><span class="p">.</span><span class="nx">event</span><span class="p">.</span><span class="nx">returnValue</span>  <span class="o">=</span> <span class="kc">false</span>
+
+<span class="kd">function</span> <span class="nx">stopDefault</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">//阻止默认浏览器动作(W3C)
+</span><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">e</span> <span class="o">&amp;&amp;</span> <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">)</span> <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+  <span class="c1">//IE中阻止函数器默认动作的方式
+</span><span class="c1"></span>  <span class="k">else</span> <span class="nb">window</span><span class="p">.</span><span class="nx">event</span><span class="p">.</span><span class="nx">returnValue</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></li>
+<li>
+<p>阻止事件冒泡</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">非IE浏览器</span><span class="err">：</span><span class="nx">event</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">()</span>
+<span class="nx">IE浏览器</span><span class="err">：</span><span class="nb">window</span><span class="p">.</span><span class="nx">event</span><span class="p">.</span><span class="nx">cancelBubble</span> <span class="o">=</span> <span class="kc">true</span>
+
+<span class="kd">function</span> <span class="nx">stopBubble</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+    <span class="c1">// 如果提供了事件对象，则是非IE浏览器下
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="nx">e</span> <span class="o">&amp;&amp;</span> <span class="nx">e</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">){</span>
+        <span class="c1">// 因此它支持W3C的stopPropagation()方法
+</span><span class="c1"></span>        <span class="nx">e</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">()</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="c1">// IE浏览器下，取消事件冒泡
+</span><span class="c1"></span>        <span class="nb">window</span><span class="p">.</span><span class="nx">event</span><span class="p">.</span><span class="nx">cancelBubble</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>如何理解 JS 的继承？</p>
+<ul>
+<li>
+<p>基于原型继承</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">Parent</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">val</span> <span class="o">=</span> <span class="nx">value</span> <span class="c1">// 实例属性
+</span><span class="c1"></span><span class="p">}</span>
+<span class="nx">Parent</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getValue</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span> <span class="c1">// 原型属性
+</span><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">val</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">Child</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
+    <span class="nx">Parent</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">value</span><span class="p">)</span> <span class="c1">// 借用构造函数来继承实例属性
+</span><span class="c1"></span><span class="p">}</span>
+<span class="nx">Child</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Parent</span><span class="p">()</span> <span class="c1">// 原型链继承
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">child</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Child</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nx">child</span><span class="p">.</span><span class="nx">getValue</span><span class="p">()</span> <span class="c1">// 1
+</span><span class="c1"></span><span class="nx">child</span> <span class="nx">instancof</span> <span class="nx">Parent</span> <span class="c1">// true
+</span></code></pre></div></li>
+<li>
+<p>基于class继承</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">class</span> <span class="nx">Parent</span><span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">val</span> <span class="o">=</span> <span class="nx">value</span>
+    <span class="p">}</span>
+    <span class="nx">getValue</span><span class="p">(){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">val</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kr">class</span> <span class="nx">Child</span> <span class="kr">extends</span> <span class="nx">Parent</span><span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
+        <span class="kr">super</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">let</span> <span class="nx">child</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Child</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nx">child</span><span class="p">.</span><span class="nx">getValue</span><span class="p">()</span> <span class="c1">// 1
+</span><span class="c1"></span><span class="nx">child</span> <span class="k">instanceof</span> <span class="nx">Parent</span> <span class="c1">// true
+</span><span class="c1"></span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>给出正整数数组 <code>array = [2,1,5,3,8,4,9,5]</code>，请写出一个函数 sort，使得 sort(array) 得到从小到大排好序的数组 <code>[1,2,3,4,5,5,8,9]</code>，新的数组可以是在 array 自身上改的，也可以是完全新开辟的内存。（不得使用 JS 内置的 sort API）</p>
+<ul>
+<li>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">min</span> <span class="o">=</span> <span class="p">(</span><span class="nx">numbers</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">min</span><span class="p">(</span>
+                <span class="p">[</span><span class="nx">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">min</span><span class="p">(</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">))]</span>
+            <span class="p">)</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">numbers</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="kd">let</span> <span class="nx">minIndex</span> <span class="o">=</span> <span class="p">(</span><span class="nx">numbers</span><span class="p">)</span> <span class="p">=&gt;{</span> <span class="k">return</span>  <span class="nx">numbers</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">min</span><span class="p">(</span><span class="nx">numbers</span><span class="p">))}</span>
+        <span class="c1">// 求出某个数字下标
+</span><span class="c1"></span>
+
+    <span class="kd">let</span> <span class="nx">sort</span> <span class="o">=</span> <span class="p">(</span><span class="nx">numbers</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">let</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">minIndex</span><span class="p">(</span><span class="nx">numbers</span><span class="p">)</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`index:</span><span class="si">${</span><span class="nx">index</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+            <span class="kd">let</span> <span class="nx">min</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`min:</span><span class="si">${</span><span class="nx">min</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+            <span class="nx">numbers</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`numbers:</span><span class="si">${</span><span class="nx">numbers</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">[</span><span class="nx">min</span><span class="p">].</span><span class="nx">concat</span><span class="p">(</span><span class="nx">sort</span><span class="p">(</span><span class="nx">numbers</span><span class="p">))</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">?</span> <span class="nx">numbers</span> <span class="o">:</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">reverse</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sort</span><span class="p">(</span><span class="nx">array</span><span class="p">))</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>你对 Promise 的了解？</p>
+<ul>
+<li>
+<p>Promise 的用途</p>
+<p>Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。</p>
+</li>
+<li>
+<p>如何创建一个 new Promise</p>
+<p><code>return new Promise(((resolve, reject) =&gt; ))</code></p>
+</li>
+<li>
+<p>如何使用 Promise.prototype.then</p>
+<p>then() 方法返回一个 Promise。它最多需要有两个参数：Promise 的成功和失败情况的回调函数。</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">promise1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;Success!&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">promise1</span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">value</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+  <span class="c1">// expected output: &#34;Success!&#34;
+</span><span class="c1"></span><span class="p">});</span>
+</code></pre></div></li>
+<li>
+<p>如何使用 Promise.all</p>
+<p>Promise.all() 方法接收一个promise的iterable类型的输入，并且只返回一个Promise实例， 那个输入的所有promise的resolve回调的结果是一个数组。这个Promise的resolve回调执行是在所有输入的promise的resolve回调都结束，或者输入的iterable里没有promise了的时候。它的reject回调执行是，只要任何一个输入的promise的reject回调执行或者输入不合法的promise就会立即抛出错误，并且reject的是第一个抛出的错误信息。</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">promise1</span> <span class="o">=</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">promise2</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">promise3</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span><span class="nx">promise1</span><span class="p">,</span> <span class="nx">promise2</span><span class="p">,</span> <span class="nx">promise3</span><span class="p">]).</span><span class="nx">then</span><span class="p">((</span><span class="nx">values</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">values</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">// expected output: Array [3, 42, &#34;foo&#34;]
+</span><span class="c1"></span>
+</code></pre></div></li>
+<li>
+<p>如何使用 Promise.race</p>
+<p><strong><code>Promise.race(iterable)</code></strong> 方法返回一个 promise，一旦迭代器中的某个promise解决或拒绝，返回的 promise就会解决或拒绝。</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">promise1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="kr">const</span> <span class="nx">promise2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nb">Promise</span><span class="p">.</span><span class="nx">race</span><span class="p">([</span><span class="nx">promise1</span><span class="p">,</span> <span class="nx">promise2</span><span class="p">]).</span><span class="nx">then</span><span class="p">((</span><span class="nx">value</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+  <span class="c1">// Both resolve, but promise2 is faster
+</span><span class="c1"></span><span class="p">});</span>
+<span class="c1">// expected output: &#34;two&#34;
+</span><span class="c1"></span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>跨域</p>
+<ul>
+<li>
+<p>什么是同源</p>
+<p>Javascript只能与同一个域中的页面进行通讯。</p>
+<p>协议相同、端口相同、域名相同。</p>
+</li>
+<li>
+<p>什么是跨域</p>
+<p>跨域，是指浏览器不能执行其他网站的脚本。它是由<strong>浏览器的同源策略</strong>造成的，是浏览器对JavaScript实施的安全限制。</p>
+</li>
+<li>
+<p>JSONP 跨域</p>
+<p>网页通过添加一个<code>&lt;script&gt;元素</code>，向服务器请求 JSON 数据，服务器收到请求后，将数据放在一个指定名字的回调函数的参数位置传回来。</p>
+<p>优点：兼容IE、跨域。</p>
+<p>缺点：读不到HTTP状态码、只支持GET请求不支持PSOST</p>
+</li>
+<li>
+<p>CORS 跨域</p>
+<p>CORS是一个W3C标准，全称是&quot;跨域资源共享&quot;（Cross-origin resource sharing）。 它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。</p>
+<p>普通跨域请求：只需服务器端设置Access-Control-Allow-Origin</p>
+<p>带cookie跨域请求：前后端都需要进行设置</p>
+</li>
+</ul>
+</li>
+<li>
+<p>对前端的理解</p>
+<ul>
+<li>最贴近用户的程序员</li>
+<li>实现页面交互，提升用户体验</li>
+<li>技术更新迭代快但核心还是HTML，CSS， JavaScript</li>
+<li>学会查文档，搜索答案</li>
+<li>从一个个小目标开始实现</li>
+<li>不要只会调用api，要理解和学习自己封装。</li>
+</ul>
+</li>
+</ol>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-06-23</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/js%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://godmiracle.github.io/js%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/" data-title="Js常见面试题" data-via="xxxx"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://godmiracle.github.io/js%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://godmiracle.github.io/js%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/" data-title="Js常见面试题" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://godmiracle.github.io/js%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/" data-title="Js常见面试题"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://godmiracle.github.io/js%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/" data-title="Js常见面试题"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://godmiracle.github.io/js%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/" data-title="Js常见面试题" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://godmiracle.github.io/js%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/" data-title="Js常见面试题" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://godmiracle.github.io/js%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/" data-title="Js常见面试题"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/dom%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/" class="prev" rel="prev" title="DOM事件和事件委托"><i class="fas fa-angle-left fa-fw"></i>DOM事件和事件委托</a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">我爱喝橙汁</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"我爱喝橙汁的博客","id-2":"我爱喝橙汁的博客"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

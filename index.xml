@@ -3,9 +3,16 @@
         <title>我爱喝橙汁的博客</title>
         <link>https://godmiracle.github.io/</link>
         <description>这是我的我爱喝橙汁的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 07 Jun 2021 17:51:39 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 23 Jun 2021 03:23:25 &#43;0800</lastBuildDate>
             <atom:link href="https://godmiracle.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Js常见面试题</title>
+    <link>https://godmiracle.github.io/js%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+    <pubDate>Wed, 23 Jun 2021 03:23:25 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://godmiracle.github.io/js%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+    <description><![CDATA[Js常见面试题 什么是闭包？闭包的用途是什么？闭包的缺点是什么？ 闭包 如果一个函数用到了外部的变量，那么这个函数加这个变量就叫做闭包 function A(){ let a = 1]]></description>
+</item><item>
     <title>DOM事件和事件委托</title>
     <link>https://godmiracle.github.io/dom%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/</link>
     <pubDate>Mon, 07 Jun 2021 17:51:39 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://godmiracle.github.io/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[CSS知识总结 浏览器渲染原理 根据HTML构建HTML树（DOM） 根据CSS构建CSS树（CSSOM） 将两棵树合并成一颗渲染树（render tree)]]></description>
-</item><item>
-    <title>Css盒模型</title>
-    <link>https://godmiracle.github.io/css%E7%9B%92%E6%A8%A1%E5%9E%8B/</link>
-    <pubDate>Sat, 15 May 2021 09:38:42 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://godmiracle.github.io/css%E7%9B%92%E6%A8%A1%E5%9E%8B/</guid>
-    <description><![CDATA[css盒模型 完整的 CSS 盒模型应用于块级盒子，内联盒子只使用盒模型中定义的部分内容。模型定义了盒的每个部分 —— margin, border, padding, and content —— 合在一起就可以创建我]]></description>
 </item></channel>
 </rss>
