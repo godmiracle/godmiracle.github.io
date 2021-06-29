@@ -3,7 +3,14 @@
         <title>所有文章 - 我爱喝橙汁的博客</title>
         <link>https://godmiracle.github.io/posts/</link>
         <description>所有文章 | 我爱喝橙汁的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 23 Jun 2021 03:23:25 &#43;0800</lastBuildDate><atom:link href="https://godmiracle.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 28 Jun 2021 12:26:42 &#43;0800</lastBuildDate><atom:link href="https://godmiracle.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>浅析MVC</title>
+    <link>https://godmiracle.github.io/%E6%B5%85%E6%9E%90mvc/</link>
+    <pubDate>Mon, 28 Jun 2021 12:26:42 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://godmiracle.github.io/%E6%B5%85%E6%9E%90mvc/</guid>
+    <description><![CDATA[浅析 MVC MVC 三个对象分别做什么，给出伪代码示例 M（Model）：数据模型，负责数据及其相关的任务 const m = { data: {...}, methods: { 增、删、改、查... } ... } V（V]]></description>
+</item><item>
     <title>Js常见面试题</title>
     <link>https://godmiracle.github.io/js%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
     <pubDate>Wed, 23 Jun 2021 03:23:25 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://godmiracle.github.io/%E6%B5%85%E6%9E%90url/</guid>
     <description><![CDATA[浅析url URL 包含哪几部分，每部分分别有什么作用 协议：规定www服务器与浏览器之间信息传输规范的标准 域名（IP）：如何定位一台设备 端口（用于区]]></description>
-</item><item>
-    <title>CSS知识总结</title>
-    <link>https://godmiracle.github.io/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</link>
-    <pubDate>Mon, 17 May 2021 15:58:58 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://godmiracle.github.io/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</guid>
-    <description><![CDATA[CSS知识总结 浏览器渲染原理 根据HTML构建HTML树（DOM） 根据CSS构建CSS树（CSSOM） 将两棵树合并成一颗渲染树（render tree)]]></description>
 </item></channel>
 </rss>
