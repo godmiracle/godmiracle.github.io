@@ -9,8 +9,8 @@
 <meta property="og:description" content="JS 函数的执行时机 解释为什么如下代码会打印 6 个 6 let i = 0 for(i = 0; i&lt;6; i&#43;&#43;){ setTimeout(()=&gt;{ console.log(i) },0) } 因为setTimeout是一个异步任务，执行到这里的操作会被浏览器丢" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://godmiracle.github.io/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" /><meta property="og:image" content="https://godmiracle.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-05-28T18:59:16&#43;08:00" />
-<meta property="article:modified_time" content="2021-05-28T18:59:16&#43;08:00" />
+<meta property="article:published_time" content="2018-09-28T18:59:16&#43;08:00" />
+<meta property="article:modified_time" content="2018-09-28T18:59:16&#43;08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://godmiracle.github.io/logo.png"/>
@@ -20,7 +20,7 @@
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://godmiracle.github.io/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" /><link rel="prev" href="https://godmiracle.github.io/js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" /><link rel="next" href="https://godmiracle.github.io/dom/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://godmiracle.github.io/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" /><link rel="prev" href="https://godmiracle.github.io/js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" /><link rel="next" href="https://godmiracle.github.io/jquery%E5%B0%8F%E7%BB%93/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -30,7 +30,7 @@
             "@type": "WebPage",
             "@id": "https:\/\/godmiracle.github.io\/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA\/"
         },"genre": "posts","wordcount":  250 ,
-        "url": "https:\/\/godmiracle.github.io\/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA\/","datePublished": "2021-05-28T18:59:16+08:00","dateModified": "2021-05-28T18:59:16+08:00","publisher": {
+        "url": "https:\/\/godmiracle.github.io\/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA\/","datePublished": "2018-09-28T18:59:16+08:00","dateModified": "2018-09-28T18:59:16+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -120,7 +120,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">JS函数的执行时机</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>我爱喝橙汁</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-05-28">2021-05-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 250 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-09-28">2018-09-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 250 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -170,7 +170,7 @@ for(i = 0; i<span class="p">&lt;</span><span class="nt">6</span><span class="err
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2021-05-28</span>
+                <span>更新于 2018-09-28</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -192,11 +192,11 @@ for(i = 0; i<span class="p">&lt;</span><span class="nt">6</span><span class="err
     </div>
 
     <div class="post-nav"><a href="/js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="prev" rel="prev" title="JS对象基本用法"><i class="fas fa-angle-left fa-fw"></i>JS对象基本用法</a>
-            <a href="/dom/" class="next" rel="next" title="DOM">DOM<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="/jquery%E5%B0%8F%E7%BB%93/" class="next" rel="next" title="JQuery小结">JQuery小结<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.84.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">我爱喝橙汁</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

@@ -22,56 +22,56 @@
 </item><item>
     <title>DOM事件和事件委托</title>
     <link>https://godmiracle.github.io/dom%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/</link>
-    <pubDate>Mon, 07 Jun 2021 17:51:39 &#43;0800</pubDate>
+    <pubDate>Wed, 07 Nov 2018 17:51:39 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://godmiracle.github.io/dom%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/</guid>
     <description><![CDATA[简述 DOM 事件模型 事件流 事件冒泡 事件冒泡是IE 的事件流，事件是由最具体的元素接收，然后逐级向上传播，在每一级的节点上都会发生，直到传播到docu]]></description>
 </item><item>
-    <title>JQuery小结</title>
-    <link>https://godmiracle.github.io/jquery%E5%B0%8F%E7%BB%93/</link>
-    <pubDate>Mon, 07 Jun 2021 17:50:44 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://godmiracle.github.io/jquery%E5%B0%8F%E7%BB%93/</guid>
-    <description><![CDATA[JQuery小结 jQuery 如何获取元素 元素选择器 jQuery 使用 CSS 选择器来选取 HTML 元素。 $(&quot;p&quot;) 选取 &lt;p&gt; 元素。 $(&quot;p.intro&quot;) 选取所有 class=&ldquo;intro&rdquo; 的 &lt;p&gt; 元素。 $(&quot;p#demo&quot;) 选取所有 id=&ldquo;demo&rdquo; 的 &lt;p&gt; 元素。 属性选择器 $(&quot;[href]&quot;) 选]]></description>
-</item><item>
     <title>DOM</title>
     <link>https://godmiracle.github.io/dom/</link>
-    <pubDate>Fri, 04 Jun 2021 05:41:12 &#43;0800</pubDate>
+    <pubDate>Sun, 04 Nov 2018 05:41:12 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://godmiracle.github.io/dom/</guid>
     <description><![CDATA[DOM编程 JS七种数据类型 number,string,bool,symbol,null,undefined,object JS五个falsy值 0,NaN,'',null,undefined DOM定义 含义：Document Object Model 文档对象模型；浏览器往window上加一个docume]]></description>
 </item><item>
+    <title>JQuery小结</title>
+    <link>https://godmiracle.github.io/jquery%E5%B0%8F%E7%BB%93/</link>
+    <pubDate>Sun, 07 Oct 2018 17:50:44 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://godmiracle.github.io/jquery%E5%B0%8F%E7%BB%93/</guid>
+    <description><![CDATA[JQuery小结 jQuery 如何获取元素 元素选择器 jQuery 使用 CSS 选择器来选取 HTML 元素。 $(&quot;p&quot;) 选取 &lt;p&gt; 元素。 $(&quot;p.intro&quot;) 选取所有 class=&ldquo;intro&rdquo; 的 &lt;p&gt; 元素。 $(&quot;p#demo&quot;) 选取所有 id=&ldquo;demo&rdquo; 的 &lt;p&gt; 元素。 属性选择器 $(&quot;[href]&quot;) 选]]></description>
+</item><item>
     <title>JS函数的执行时机</title>
     <link>https://godmiracle.github.io/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/</link>
-    <pubDate>Fri, 28 May 2021 18:59:16 &#43;0800</pubDate>
+    <pubDate>Fri, 28 Sep 2018 18:59:16 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://godmiracle.github.io/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/</guid>
     <description><![CDATA[JS 函数的执行时机 解释为什么如下代码会打印 6 个 6 let i = 0 for(i = 0; i&lt;6; i++){ setTimeout(()=&gt;{ console.log(i) },0) } 因为setTimeout是一个异步任务，执行到这里的操作会被浏览器丢]]></description>
 </item><item>
     <title>JS对象基本用法</title>
     <link>https://godmiracle.github.io/js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</link>
-    <pubDate>Sun, 23 May 2021 03:25:19 &#43;0800</pubDate>
+    <pubDate>Sun, 23 Sep 2018 03:25:19 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://godmiracle.github.io/js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</guid>
     <description><![CDATA[JS对象基本用法 声明对象的两种语法 let obj ={} let obj = new Object({}) 如何删除对象的属性 delete obj.xxx或delete obj['xxx'] 如何查看对象的属性 查看自身所有属性 Object.keys(obj) 查看]]></description>
 </item><item>
     <title>JS基本语法</title>
     <link>https://godmiracle.github.io/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
-    <pubDate>Fri, 21 May 2021 02:18:26 &#43;0800</pubDate>
+    <pubDate>Fri, 21 Sep 2018 02:18:26 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://godmiracle.github.io/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
     <description><![CDATA[JS基本语法 什么是表达式和语句 表达式 1 + 2表达式的值为3 语句 let a = 1是一个语句 二者的区别 表达式一般都有值，语句可能有也有可能没有 语句一般会改]]></description>
 </item><item>
     <title>JavaScript</title>
     <link>https://godmiracle.github.io/javascript/</link>
-    <pubDate>Tue, 18 May 2021 17:51:59 &#43;0800</pubDate>
+    <pubDate>Tue, 18 Sep 2018 17:51:59 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://godmiracle.github.io/javascript/</guid>
     <description><![CDATA[JavaScript 的诞生 1994年，网景发布了浏览器，在当时轰动一时。但是，此时它还不具备与访问者交互的能力。网景公司急需一门网页脚本语言，使得浏览器可以与]]></description>
 </item><item>
     <title>浅析url</title>
     <link>https://godmiracle.github.io/%E6%B5%85%E6%9E%90url/</link>
-    <pubDate>Mon, 17 May 2021 19:34:10 &#43;0800</pubDate>
+    <pubDate>Thu, 17 May 2018 19:34:10 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://godmiracle.github.io/%E6%B5%85%E6%9E%90url/</guid>
     <description><![CDATA[浅析url URL 包含哪几部分，每部分分别有什么作用 协议：规定www服务器与浏览器之间信息传输规范的标准 域名（IP）：如何定位一台设备 端口（用于区]]></description>
